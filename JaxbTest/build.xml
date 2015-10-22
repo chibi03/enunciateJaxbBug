@@ -19,7 +19,7 @@
 			<fileset dir="${jdk.home}/lib">
 	        	<include name="*.jar"/>
 	    	</fileset>
-	    	<!--
+	    	<!-- uncomment for jar doc
 	    	<fileset dir="C:\Users\wvusaa\git\enunciateJaxbBug\JaxbTest">
 	        	<include name="**/*.jar"/>
 	    	</fileset>-->
@@ -42,6 +42,7 @@
 		  <classpath refid="enunciate.classpath"/>
 		</taskdef>
 
+		<!-- change to some dir e.g. JaxbTest\bis to just build from jar -->
 		<enunciate basedir="C:\Users\wvusaa\git\enunciateJaxbBug\JaxbTest\src" buildDir="${enunciate.working.dir}" javacTargetVersion="1.7" >
 		  <include name="**/*.java"/>
 		  <classpath refid="enunciate.classpath"/>
