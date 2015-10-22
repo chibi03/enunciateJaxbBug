@@ -30,10 +30,6 @@ public String getName() {
  return name;
 }
 
-/**
- * 
- * @param name the title of the book
- */
 public void setName(String name) {
  this.name = name;
 }
