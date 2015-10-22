@@ -1,0 +1,23 @@
+<enunciate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://enunciate.webcohesion.com/schemas/enunciate-2.0.0.xsd">
+
+  <modules>
+  	<c-xml-client disabled="true" />
+    <csharp-xml-client disabled="true" />
+    <gwt-json-overlay disabled="true" />
+    <idl disableWadl="true" />
+    <jaxrs groupBy="class"/>
+    <jackson datatype-detection="local"/>
+    <jaxb />
+    <jackson1 disabled="true" />
+    <java-json-client disabled="true" />
+    <java-xml-client disabled="true" />
+    <jaxws disableCompile="true" />
+    <docs disableRestMountpoint="true"/>
+    <obj-c-xml-client disabled="true" />
+    <php-json-client disabled="true" />
+    <php-xml-client disabled="true" />
+    <ruby-json-client disabled="true" />
+    <swagger disabled="true" />
+  </modules>
+
+</enunciate>

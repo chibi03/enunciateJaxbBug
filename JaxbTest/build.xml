@@ -1,0 +1,50 @@
+
+<project name="testproject" basedir="." xmlns:mvn="urn:maven-artifact-ant" default="build">
+	<description>
+		Enunciate basic build file
+	</description>
+	<!-- set global properties for this build -->
+	<property name="enunciate.working.dir" location="enunciate"/>
+	<property name="enunciate.home" location="C:/dev/lib/enunciate-2.0.0"/>
+	<property name="build.dir" location="build"/>
+	<property name="jdk.home" location="C:/Program Files/Java/jdk1.7.0_79"/>
+	<property name="lib" location="C:/dev/lib"/>
+
+	<target name="clean">
+	    <delete dir="${enunciate.working.dir}"/>
+	</target>
+
+	<target name="build">
+		<path id="compile.classpath">
+			<fileset dir="${jdk.home}/lib">
+	        	<include name="*.jar"/>
+	    	</fileset>
+	    	<fileset dir="C:\Users\wvusaa\git\enunciateJaxbBug\JaxbTest">
+	        	<include name="**/*.jar"/>
+	    	</fileset>
+		</path>
+
+		<path id="enunciate.classpath">
+		  <fileset dir="${enunciate.home}/lib">
+		    <include name="*.jar"/>
+		    <exclude name="*-sources.jar"/>
+		  </fileset>
+		</path>
+
+		<path id="enunciate.sourcepath">
+  			<fileset dir="${enunciate.home}/lib">
+   				<include name="*-sources.jar"/>
+  			</fileset>
+		</path>
+
+		<taskdef name="enunciate" classname="com.webcohesion.enunciate.EnunciateTask">
+		  <classpath refid="enunciate.classpath"/>
+		</taskdef>
+
+		<enunciate basedir="C:\Users\wvusaa\git\enunciateJaxbBug\JaxbTest" buildDir="${enunciate.working.dir}" javacTargetVersion="1.7" >
+		  <include name="**/*.java"/>
+		  <classpath refid="enunciate.classpath"/>
+		  <classpath refid="compile.classpath"/>
+		</enunciate>
+	</target>
+</project>
