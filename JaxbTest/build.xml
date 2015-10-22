@@ -19,9 +19,10 @@
 			<fileset dir="${jdk.home}/lib">
 	        	<include name="*.jar"/>
 	    	</fileset>
+	    	<!--
 	    	<fileset dir="C:\Users\wvusaa\git\enunciateJaxbBug\JaxbTest">
 	        	<include name="**/*.jar"/>
-	    	</fileset>
+	    	</fileset>-->
 		</path>
 
 		<path id="enunciate.classpath">
@@ -41,7 +42,7 @@
 		  <classpath refid="enunciate.classpath"/>
 		</taskdef>
 
-		<enunciate basedir="C:\Users\wvusaa\git\enunciateJaxbBug\JaxbTest" buildDir="${enunciate.working.dir}" javacTargetVersion="1.7" >
+		<enunciate basedir="C:\Users\wvusaa\git\enunciateJaxbBug\JaxbTest\src" buildDir="${enunciate.working.dir}" javacTargetVersion="1.7" >
 		  <include name="**/*.java"/>
 		  <classpath refid="enunciate.classpath"/>
 		  <classpath refid="compile.classpath"/>
